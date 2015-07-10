@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+	<html ng-app="applica">
+	
+	<head>
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+			<link rel="stylesheet" href="styles.css">
+			<title>
+			Math SS
+			</title>
+<div class="titl">
+Welcome to Word Math
+</div>
+
+		</head>
+		<body ng-controller="MathController as applica">
+		<script type="text/javascript" src="angular.min.js"></script>
+			<script type="text/javascript" src="appWar.js"></script>
+		<div class="leftSide">
+		<p>
+		<div class="list-group-item" ng-repeat="questions in applica.questions">
+			<div class="questTitle"><h3> {{questions.title}}
+			</h3></div>
+			<div class="pict">
+			<div class="questImg" ng-repeat="image in questions.images">
+						<img src="{{image.thumb}}"></img>
+			</div>		
+			</div>
+			<div class="questText">
+			{{questions.text}}
+			</div>
+			
+			<div class="list-group-item" ng-repeat="answer in questions.answers">
+			<input class="ansBut" type="button" value="{{answer.first}}"></button>
+			<input class="ansBut" type="button" value="{{answer.second}}"></button>
+			<input class="ansBut" type="button" value="{{answer.third}}"></button>
+			</div>
+				
+		
+		
+		</p>
+		</div>
+		<div class="rightSide">
+		
+		</div>
+		
+		</body>
+		</html>
